@@ -3,72 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses Offered | Raast Academy</title>
+    <title>Raast Academy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <style> 
+  .sticky-top {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* Higher than the elements below it */
+}
+
+  </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Raast Academy</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+            
+                <a class="navbar-brand text-white" href="#">Raast Academy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon sticky-top"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link text-white" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link text-white" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="admission.html">Admission</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="courses.html">Courses</a>
+                            <a class="nav-link text-white" href="#admission">Admission</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faculty.html">Faculty</a>
+                            <a class="nav-link text-white" href="#Regular-courses">Regular Courses</a>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link text-white" href="#featured-courses">Featured Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link text-white" href="#faculty">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#fees">Fee Structure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#privacy">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#faq">FAQs</a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </div> 
         </nav>
     </header>
 
-    <section id="courses" class="py-5">
+    <section id="home" class="py-5 text-center text-white" style="background-color: #0056b3;">
         <div class="container">
-            <h2>Courses Offered</h2>
+            <h1>Welcome to Raast Academy</h1>
+            <p>Your path to a brighter future.</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">About Us</h2>
+            <p>Welcome to Raast Academy, where we believe in nurturing young minds and shaping the leaders of tomorrow. Established with a vision to provide holistic education that blends academic excellence with character development, Raast Academy stands as a beacon of learning in Knowledge City. Our dedicated faculty members are committed to fostering a stimulating environment where students can explore their potential and thrive academically, socially, and personally.At Raast Academy, we offer a comprehensive range of courses designed to cater to diverse learning needs, from primary education to advanced secondary levels. Our curriculum is enriched with innovative teaching methods and extracurricular activities aimed at cultivating critical thinking, creativity, and leadership skills among our students.Driven by a philosophy of inclusivity and excellence, we strive to instill values of integrity, compassion, and resilience in our students, preparing them to face the challenges of the modern world with confidence. Whether in the classroom, on the playing field, or within the community, Raast Academy is dedicated to empowering every student to reach their full potential and become responsible global citizens.Join us on this educational journey where every step is guided by our commitment to nurturing minds, enriching lives, and shaping futures.</p>
+        </div>
+    </section>
+
+    <section id="admission" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Admission</h2>
+          
+          <form            action="submit_admission.php" method="POST">
+          
+                <div class="form-group">
+                    <label for="student-name">Student Name*</label>
+                    <input type="text" class="form-control" id="student-name" name="student-name" required>
+                </div>
+              <div class="form-group">
+                    <label for="date of birth">Date Of Birth*</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+              <div class="form-group">
+                    <label for="class">Class*</label><br>
+                <select required>
+                  <option>5th</option>
+                  <option>6th</option>
+                  <option>7th</option>
+                  <option>8th</option>
+                  <option>9th</option>
+                  <option>10th</option>
+                  <option>11th</option>
+                  <option>12th</option>
+                  </select>
+              </div>
+                  <div class="form-group">
+                  <label for="courses">Courses</label>  <br>
+                    <select>                    
+                  <option>
+                    Spoken English</option>
+                   <option>
+                    C++ Language</option>
+                   <option>
+                    Microsoft Office</option>
+                   <option>
+                    Graphic Designing</option>
+               </select>
+                </div>
+              <div class="form-group">
+                    <label for="gender">Gender</label><br>
+                <select>
+                  
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="parents-name">Father/Mother Name*</label>
+                    <input type="text" class="form-control" id="parents-name" name="parents-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number 1*</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+               <div class="form-group">
+                    <label for="phone">Phone Number 2(Optional)</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="cnic">Father/Mother CNICs(Bring a photocopy while visiting)*</label>
+                    <input type="text" class="form-control" id="cnic" name="cnic" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+</fieldset>
+            </form>
+                
+        </div>
+    </section>
+
+    <section id="Regular-courses" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Classes</h2>
             <div class="row">
+<div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Regular Classes(5th-12th)</h5>
+                            <p class="card-text">Our regular classes provide a structured and consistent learning environment, ensuring that students receive comprehensive instruction and support throughout their educational journey. Each course is designed to build a solid foundation in the subject matter, with a balanced mix of lectures, interactive activities, and hands-on projects. Our experienced instructors guide students through the curriculum, fostering critical thinking and practical skills that are essential for academic and professional success. Regular assessments and feedback help track progress and ensure that students are on the path to achieving their learning goals.</p> <a href="#admission" class="btn btn-primary">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+               <section id="featured-courses" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Courses(Only in Vacations)</h2>
+            <div class="row">
+
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Course Title 1</h5>
-                            <p class="card-text">Brief description of the course.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <h5 class="card-title">Spoken English</h5>
+                            <p class="card-text">Our spoken English course is designed to enhance your fluency, pronunciation, and confidence in speaking English. Whether you are a beginner or looking to polish your skills, our comprehensive program covers essential aspects such as vocabulary building, grammar, conversation practice, and accent reduction. With experienced instructors and interactive sessions, you will engage in real-life dialogues and activities to improve your communication abilities. Join us to unlock new opportunities in your personal and professional life through the power of effective spoken English.</p>
+                            <a href="#admission" class="btn btn-primary">Apply Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Course Title 2</h5>
-                            <p class="card-text">Brief description of the course.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <h5 class="card-title">C++ Coding</h5>
+                            <p class="card-text">Our C++ coding course is tailored to both beginners and intermediate programmers looking to master one of the most powerful and versatile programming languages. The curriculum covers fundamental concepts such as data structures, object-oriented programming, and memory management, as well as advanced topics like template programming and the Standard Template Library (STL). Through hands-on projects and real-world examples, you will gain practical experience and problem-solving skills essential for software development. Led by industry experts, this course equips you with the knowledge and confidence to tackle complex coding challenges and advance your career in technology.</p>
+                            <a href="#admission" class="btn btn-primary">Apply Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Course Title 3</h5>
-                            <p class="card-text">Brief description of the course.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <h5 class="card-title">Microsoft Office</h5>
+                            <p class="card-text">Our Microsoft Office course is designed to provide comprehensive training in the essential tools of Microsoft Office Suite, including Word, Excel, PowerPoint, and Outlook. Whether you are a beginner or looking to enhance your productivity, this course covers everything from basic functions to advanced features, such as data analysis in Excel, professional document formatting in Word, dynamic presentations in PowerPoint, and efficient email management in Outlook. With practical exercises and expert guidance, you will develop the skills needed to effectively use Microsoft Office in both personal and professional settings, boosting your efficiency and career prospects.</p>
+                            <a href="#admission" class="btn btn-primary">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Designing</h5>
+                            <p class="card-text">Our Graphic Designing course offers an in-depth exploration into the world of visual communication, perfect for aspiring designers and creative professionals. Covering key software tools such as Adobe Photoshop, Illustrator, and InDesign, the curriculum delves into essential design principles, typography, color theory, and layout techniques. Through hands-on projects and real-world assignments, you will learn to create stunning visuals for various media, including print, web, and social media. Guided by experienced designers, this course helps you build a strong portfolio, develop your unique style, and gain the skills needed to succeed in the dynamic field of graphic design.</p>
+                            <a href="#admission" class="btn btn-primary">Apply Now</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +206,349 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-4">
+    <section id="faculty" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Faculty Members</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr.Muhammad Zubair Sheikh</h5>
+                            <p class="card-text">Position: Dr.Professor</p>
+                            <p class="card-text">Qualifications: PhD in Physics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Asif Ali Anjum</h5>
+                            <p class="card-text">Position: Mathematics Teacher</p>
+                            <p class="card-text">Qualifications: MSc in Mathematics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ghulaam Rasool</h5>
+                            <p class="card-text">Position:English Teacher</p>
+                            <p class="card-text">Qualifications: Bsc Food Sciences</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Zara Fayyaz</h5>
+                            <p class="card-text">Position:Chemistry&Biology Teacher</p>
+                            <p class="card-text">Qualifications: Bsc Medical</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Zainab Amir</h5>
+                            <p class="card-text">Position:Arts Subjects Teacher</p>
+                            <p class="card-text">Qualifications: Bachelors in Business Administration</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Arfa Jawad</h5>
+                            <p class="card-text">Position:Computer Science Teacher and Primary Kids Teacher</p>
+                            <p class="card-text">Qualifications: BS Statistics</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Waleed Abdul Rehman</h5>
+                            <p class="card-text">Position:Coordinater Teacher</p>
+                            <p class="card-text">Qualifications: Fsc.Pre Engineering</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Emaan Shahid</h5>
+                            <p class="card-text">Position:Commerce Teacher</p>
+                            <p class="card-text">Qualifications: Bachelors in Commerce</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Miss Areeba</h5>
+                            <p class="card-text">Position:Primary kids Teacher</p>
+                            <p class="card-text">Qualifications: BS Cardiac</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Fee Structure</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered" style="text-align:center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" style="color:skyblue">Class</th>
+                            <th scope="col" style="color:skyblue">Tuition Fee PKR(per month)</th>
+                            <th scope="col" style="color:skyblue">Admission Fees (PKR)</th>
+                            <th scope="col" style="color:skyblue">Test Session PKR (last 5 months of session)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Class 5</td>
+                            <td>1800</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 6</td>
+                            <td>2000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 7</td>
+                            <td>2500</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 8</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 9</td>
+                              <td>5000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>                          
+<tr>
+                            <td>Class 10</td>
+                            <td>6000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 11</td>
+                            <td>7000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Class 12</td>
+                            <td>8000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                        </tr>
+                      <tr>
+                            <td>Spoken English</td>
+                            <td>1000</td>
+                            <td>None</td>
+                            <td>None</td>
+                        </tr>
+                      <tr>
+                            <td>C++ Coding</td>
+                            <td>2000</td>
+                            <td>None</td>
+                            <td>None</td>
+                        </tr>
+<tr>
+                            <td>Microsoft Office</td>
+                            <td>2000</td>
+                            <td>None</td>
+                            <td>None</td>
+                        </tr>
+                      <tr>
+                            <td>Graphic Designing</td>
+                            <td>4000</td>
+                            <td>None</td>
+                           <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Get In Touch</h4>
+                    <form action="submit_contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form><br>
+                </div>
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <p>Email: info@raastacademy.com</p>
+                    <p>Phone: +92 321 9891604</p>
+                    <p>Address: 958-N Samanabad Opposite to Niazi Medical Center</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy" class="py-5">
+        <div class="container">
+            <h2 class="section-heading">Privacy Policy</h2>
+            <p>Your privacy is very important to us.RAAST Academy is committed to protecting your privacy. We collect personal information, such as your name, email address, and payment details, as well as usage data, like your IP address and browsing behavior. This information is used to provide and improve our services, communicate with you, and enhance your user experience. We may share your data with service providers, in response to legal requirements, or during business transfers. While we strive to protect your information, we cannot guarantee its absolute security.
+
+You have rights regarding your personal data, including access, correction, deletion, and restriction of processing, depending on your location. Our services may contain links to external websites, and we recommend reviewing their privacy policies. We may update this policy periodically, and any changes will be posted on this page. For questions, you can contact us via email, phone, or our website.</p>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is the admission process?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            The admission process involves filling out an application form, submitting required documents, and attending an interview.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What courses do you offer?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We offer a variety of courses ranging from primary education to advanced secondary level courses in science, arts, and commerce streams.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What is the fee structure?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            The fee structure varies by class. Please refer to the fee structure section for detailed information.
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What are the qualifications of your teachers?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Our instructors are highly qualified professionals with extensive experience in their respective fields, holding advanced degrees and industry certifications.
+                        </div>
+                    </div>
+                </div>
+           <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What is the class size for your courses?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+Our class sizes are kept small to ensure personalized attention and an optimal learning environment, typically ranging from 20 to 30 students per class.
+                        </div>
+                    </div>
+           </div>
+           <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+What are the academy’s operating hours?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+Our regular operating hours are Monday to Saturday, from 3:50PM to 8:30 PM.
+                        </div>
+                    </div>
+                </div>
+           <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+How do you ensure the quality of your programs?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+We maintain high standards through regular curriculum reviews, student feedback, Weekky exams etc.
+                        </div>
+                    </div>
+                </div>
+           <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Do you offer any scholarships or financial aid?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+We provide Discounts and free books options for eligible students.
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-4">
         <div class="container text-center">
             <p>&copy; 2024 Raast Academy. All rights reserved.</p>
         </div>
